@@ -14,12 +14,12 @@ export default function Button({ label, theme, onPress }) {
           style={[styles.button, { backgroundColor: "#324523" }]}
           onPress={onPress}
         >
-            <FontAwesome 
+          <FontAwesome
             name="picture-o"
             size={18}
-            color={'#fff'}
+            color={"#fff"}
             style={styles.buttonIcon}
-            />
+          />
           <Text style={styles.buttonLabel}>{label}</Text>
         </Pressable>
       </View>
@@ -27,10 +27,10 @@ export default function Button({ label, theme, onPress }) {
   }
   return (
     <View style={styles.buttonContainer}>
-        <Pressable style={styles.button} onPress={() => alert('You pressed a button.')}>
-          <Text style={styles.buttonLabel}>{label}</Text>
-        </Pressable>
-      </View>
+      <Pressable style={styles.button} onPress={onPress}>
+        <Text style={styles.buttonLabel}>{label}</Text>
+      </Pressable>
+    </View>
   );
 }
 
